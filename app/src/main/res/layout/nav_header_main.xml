@@ -13,12 +13,32 @@
         android:gravity="bottom">
 
     <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:paddingTop="@dimen/nav_header_vertical_spacing"
             app:srcCompat="@drawable/profiledefault"
             android:contentDescription="@string/nav_header_desc"
-            android:id="@+id/imageView"/>
+            android:id="@+id/user_img"/>
+    <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_img"
+            android:text="Login"
+            android:background="@android:color/transparent"
+            android:textSize="18sp"
+            android:onClick="onLoginClicked"
+            android:textAllCaps="false"
+            android:id="@+id/loginBtn"
+    />
+    <ImageButton
+            android:id="@+id/add_channelBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/user_img"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_add"
+            android:onClick="onAddChannelClicked"
+            android:scaleType="fitXY"/>
 
     <TextView
             android:id="@+id/name"
@@ -28,14 +48,14 @@
             android:paddingLeft="@dimen/nav_header_left_spacing"
             android:textSize="20sp"
             android:text="@string/nav_header_title"
-            android:layout_toRightOf="@id/imageView"
+            android:layout_toRightOf="@id/user_img"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/nav_header_subtitle"
-            android:layout_toRightOf="@id/imageView"
+            android:layout_toRightOf="@id/user_img"
             android:paddingLeft="@dimen/nav_header_left_spacing"
             android:textSize="12sp"
             android:layout_below="@id/name"
